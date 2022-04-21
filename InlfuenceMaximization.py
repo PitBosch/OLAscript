@@ -53,9 +53,9 @@ node_index=4
 dataset = []
 
 for e in range (0, n_episodes):
-    dataset.append(simulate_episode(init_prob_matrix=prob_matrix, n_steps_max=10)
+    dataset.append(simulate_episode(init_prob_matrix=prob_matrix, n_steps_max=10))
 
-estimated_prob= estimate_probabilities(datatset=dataset, node_index=node_index, n_nodes=n_nodes)
+estimated_prob= estimate_probabilities(dataset=dataset, node_index=node_index, n_nodes=n_nodes)
 
 print("True P Matrix: ", prob_matrix[:,4])
 print("Estimated P Matrix: ", estimated_prob)
