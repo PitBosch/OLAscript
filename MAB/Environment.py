@@ -4,7 +4,7 @@ class Environment():
         self.n_arms=n_arms
         self.probabilities=probabilities
 
-    def round(selfself, puleld_arm):
+    def round(self, puleld_arm):
         reward=np.random.binomial(1, self.probabilities[pulled_arm])
         return reward
     

@@ -1,8 +1,8 @@
-from Learner import *
+from MAB.Learner import *
 class TS_learner(Learner):
-    def __init(self, n_arms):
+    def __init__(self, n_arms):
         super().__init__(n_arms)
-        self.beta_parameters=np.ones(n_arms,2)
+        self.beta_parameters=np.ones((n_arms,2))
 
     def pull_arm(self):
         idx=np.argmax(np.random.beta(self.beta_parameters[:,0],self.beta_parameters[:,1]))

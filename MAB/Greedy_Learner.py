@@ -1,7 +1,7 @@
-from Learner import *
+from MAB.Learner import *
 class Greedy_Learner(Learner):
     def __init__(self, n_arms):
-        super.__init__((n_arms))
+        super().__init__(n_arms)
         self.expected_rewards=np.zeros(n_arms)
 
     def pull_arm(self):
