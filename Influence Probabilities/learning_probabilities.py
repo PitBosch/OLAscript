@@ -40,6 +40,13 @@ def estimate_probabilities(dataset, node_index, n_nodes):
 
 n_nodes=5
 n_episodes=1000
-prob_matrix=np.random.uniform(0.0,0.1,(n_nodesn_nodes))
+prob_matrix=np.random.uniform(0.0,0.1,(n_nodes,n_nodes))
 node_index=4
 dataset = []
+for e in range(0, n_episodes):
+    dataset.append(simulate_episode(init_prob_matrix, n_steps_max=10))
+
+estimated_prob=estimate_probabilities(dataset=dataset, node_index=node_index,n_nodes=n_nodes)
+
+print("True P Matrix: ", prob_matrix[:,4])
+print("Estimated P Matrix: " estimated_prob)
